@@ -29,22 +29,137 @@ p {
 }
 .home-page{
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    &__container{
-        margin: 48px 0 0 0;
-        margin-left: 16px;
-        margin-right: 16px;
-        width: 375px;
-    }
-    &__header{
+}
+.banner{
+    margin: 48px 0 0 0;
+    width: 375px;
+    height: min(220px);
+    &_header{
         height: 80px;
-    }
-    &__title{
+        padding: 0 16px;
+    };
+    &_title{
+        text-align: center;
+        margin: 0 auto;
+        line-height: normal;
         font-size: 32px;
-    }
-    &__description{
+    };
+    &_description{
+        padding: 0 16px;
+        margin: 16px 0 0 0;
         height: 120px;
+        text-align: justify;
+    };
+};
+.banner-ad{
+    margin-bottom: 64px;
+    &_box{
+        width: 343px;
+        height: 196px;
+        margin-top: 16px;
+        border-radius: 20px;
+        background-color: var(--color-secondary2);
+    };
+    &_title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        height: 96px;
+    };
+    &_logo{
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+    };
+    &_title{
+        font-size: 20px;
+        margin: 0 auto;
+    };
+    &_description{
+        opacity: 50%;
+        line-height: 1.22;
+        font-size: 14px;
+        text-align: center;
+        margin: 16px 20px 0 20px;
+    };
+}
+@media only screen and (min-width: 600px) {
+    .banner{
+        width: 496px;
+        margin-top: 247px;
+        &_header{
+            height: auto;
+            padding: 0;
+        };
+        &_title{
+            text-align: left;
+            font-size: 48px;
+        };
+        &_description{
+        padding: 0;
+        line-height: 1.24;
+        height: auto;
         text-align: left;
+        };
+    };
+    .banner-ad{
+        display: flex;
+        flex-wrap: wrap;
+        width: 496px;
+        height: 460px;
+    &_box{
+        width: 240px;
+        height: 218px;
+        margin: 8px 8px 8px 0px;
+        border-radius: 20px;
+        background-color: var(--color-secondary2);
+    };
+    &_box:nth-child(even){
+        margin: 8px 0px 8px 8px;
     }
+    &_title-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        height: 96px;
+    };
+    &_logo{
+        width: 56px;
+        height: 56px;
+        margin: 0 auto;
+    };
+    &_title{
+        font-size: 20px;
+        margin: 0 auto;
+    };
+    &_description{
+        opacity: 50%;
+        line-height: 1.22;
+        font-size: 14px;
+        text-align: center;
+        margin: 16px 14px 0 14px;
+    };
+    };
+}
+@media only screen and (min-width: 992px) {
+    .home-page{
+        flex-direction: row;
+    };
+    .banner{
+        width: 467px;
+        height: 232px;
+        margin: 159px 0px 0px 0px;
+        &_description{
+            margin: 24px 0 0 0;
+        };
+    };
+    
 }
