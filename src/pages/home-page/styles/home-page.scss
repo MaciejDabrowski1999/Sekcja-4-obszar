@@ -9,13 +9,13 @@ h1{
     font-size: 48px;
     line-height: 1.56;
     letter-spacing: -0.2%;
-    font-weight:bold;
+    font-weight:500;
 }
 h2 {
     font-size: 32px;
     line-height: 1.56;
     letter-spacing: -0.2%;
-    font-weight:bold;
+    font-weight:500;
 }
 h3{
     font-size: 20px;
@@ -25,7 +25,7 @@ p {
     color: var(--color-secondary);
     font-size: 16px;
     line-height: 1.24;
-    font-weight: normal;
+    font-weight: 400;
 }
 .home-page{
     display: flex;
@@ -36,8 +36,8 @@ p {
 }
 .banner{
     margin: 48px 0 0 0;
-    width: 375px;
-    height: min(220px);
+    width: 100%;
+    min-height: 220px;
     &_header{
         height: 80px;
         padding: 0 16px;
@@ -57,9 +57,12 @@ p {
 };
 .banner-ad{
     margin-bottom: 64px;
+    min-width: 200px;
+    min-height: 842px;
     &_box{
-        width: 343px;
+        width: 91.4%;
         height: 196px;
+        margin: 0 auto;
         margin-top: 16px;
         border-radius: 20px;
         background-color: var(--color-secondary2);
@@ -112,7 +115,7 @@ p {
         display: flex;
         flex-wrap: wrap;
         width: 496px;
-        height: 460px;
+        min-height: 460px;
     &_box{
         width: 240px;
         height: 218px;
@@ -149,17 +152,42 @@ p {
     };
     };
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px ) {
     .home-page{
         flex-direction: row;
+        margin-top: 11%;
+        align-items:start;
     };
     .banner{
         width: 467px;
         height: 232px;
-        margin: 159px 0px 0px 0px;
+        margin: 0 7.5% 0 0;
+        &_title{
+            line-height: 1.56;
+        }
+
         &_description{
-            margin: 24px 0 0 0;
+            margin: 16px 0 0 0;
         };
     };
-    
+    .banner-ad{
+        width: 560px;
+        height: 511px;
+        margin: 0;
+        &_box{
+            width: 268px;
+            height: 240px;
+            margin: 0 12px 31px 0;
+        };
+        &_box:nth-child(even){
+            margin: 0 0 0 12px;
+        };
+        &_description{
+            padding: 0 16px;
+            text-align: center;
+            font-weight: 200;
+            font-size: 16px;
+        };
+    };
+
 }
