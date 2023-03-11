@@ -1,0 +1,50 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+h1{
+    font-size: 48px;
+    line-height: 1.56;
+    letter-spacing: -0.2%;
+    font-weight:bold;
+}
+h2 {
+    font-size: 32px;
+    line-height: 1.56;
+    letter-spacing: -0.2%;
+    font-weight:bold;
+}
+h3{
+    font-size: 20px;
+    line-height: 1.20;
+}
+p {
+    color: var(--color-secondary);
+    font-size: 16px;
+    line-height: 1.24;
+    font-weight: normal;
+}
+.home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        margin: 48px 0 0 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 375px;
+    }
+    &__header{
+        height: 80px;
+    }
+    &__title{
+        font-size: 32px;
+    }
+    &__description{
+        height: 120px;
+        text-align: left;
+    }
+}
