@@ -78,6 +78,10 @@ p {
     &_logo{
         width: 56px;
         height: 56px;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
     };
     &_title{
