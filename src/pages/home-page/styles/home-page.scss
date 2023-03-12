@@ -137,6 +137,10 @@ p {
     &_logo{
         width: 56px;
         height: 56px;
+        border-radius: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
     };
     &_title{
@@ -190,4 +194,18 @@ p {
         };
     };
 
+}
+.color{
+    &_primary1{
+        background-color: var(--color-primary2);
+    }
+    &_primary2{
+        background-color: var(--color-primary3);
+    }
+    &_primary3{
+        background-color: var(--color-primary4);
+    }
+    &_primary4{
+        background-color: var(--color-primary5);
+    }
 }
